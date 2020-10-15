@@ -29,4 +29,9 @@ vagrant up
 vagrant ssh
 ```
 
+для проброса портов используем Vagrantfile:
+```ruby
+config.vm.network "forwarded_port", guest: 80, host: 22080
+```
+
 по такому же принципу устанавливается виртуальная машина для qemu, только нужно указать соответствующий json-файл
